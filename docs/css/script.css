@@ -1,0 +1,14 @@
+.nopadding{padding-right: 0px !important;padding-left: 0px !important;}
+.pagebox{
+	height:650px;
+}
+
+.logo{
+	top: 25px;
+	left:390px;
+	z-index: 10;
+	height: 600px;
+	width: 600px;
+	position: fixed;
+}
+
