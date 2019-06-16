@@ -3,8 +3,9 @@
 /* Routes aplication config.
 /* 
 /* Utilizado diretiva uiRouter do AngularJs.     
-/*   12132132
+/* 
 /* Desenvolvido por Matheus Ferreira <maathe.f@gmail.com>
+/*  Desenvolvido por Ronaldo Machado <>
 /*
 /* ****************************************************** */
 moduleApp.config(function($stateProvider) {
