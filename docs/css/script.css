@@ -2,21 +2,31 @@ body{
 	background-color: black !important;
 }
 
+ul{list-style-type: none;}
+
 .nopadding{padding-right: 0px !important;padding-left: 0px !important;}
 .pagebox{
 	height:650px;
 }
+.router-btn-simple:hover h4{
+	color:#02a9a2;
+	cursor: pointer;
+	transition: 0.4s;
+} 	
+.router-btn-simple{
+	margin-top: 5px;
+	list-style: none;
+} 
 
 .logo{
-	position: relative;
-	z-index: 10;
 	height: 100px;
+	width: 470px;
 }
 
 .loading{
 	top: -225px;
 	left: -225px;
-	opacity: 0.7;
+	opacity: 0.3;
 	position: fixed; 
 	z-index: 0;
 	height: 450px;

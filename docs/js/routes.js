@@ -11,6 +11,19 @@
 moduleApp.config(function($stateProvider) {
   $stateProvider
     .state('index', {
-      url: ""
+      url: "",
+      templateUrl: "/home.html"
+    })   
+    .state('about', {
+      url: "/about",
+      templateUrl: "/about.html"
+    })   
+    .state('touchdown', {
+      url: "/touchdown",
+      templateUrl: "/touchdown.html"
+    })   
+    .state('discography', {
+      url: "/discography",
+      templateUrl: "/discography.html"
     })   
 });
