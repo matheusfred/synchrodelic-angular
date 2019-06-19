@@ -20,82 +20,19 @@
 	<body ng-controller="indexCtrl">		
 		<!-- VIEW'S -->
 		<img src="img/logo.png" id="loading" class="loading" alt="Synchrodelic Logomarca">		
-		<div class="col-lg-12 row">
-			<div class="col-md-5">
+		<div class="col-lg-12">
+			<div class="col-md-12"> 
+				<div class="row">
+					<div class="col-md-3 router-btn-simple" ui-sref="index"><h5>Home</h5></div>
+					<div class="col-md-3 router-btn-simple" ui-sref="about"><h5>About</h5></div>
+					<div class="col-md-3 router-btn-simple" ui-sref="touchdown"><h5>touchdown</h5></div>
+					<div class="col-md-3 router-btn-simple" ui-sref="discography"><h5>discography</h5></div>
+				</div>
+			</div>
+			<div class="col-md-12">
 				<img src="img/sync.png" class="logo" alt="Synchrodelic Logomarca">
-			</div>
-			<ul class="col-md-7">
-				<li class="col-md-3 router-btn-simple" ui-sref="index"><h4>Home</h4></li>
-				<li class="col-md-3 router-btn-simple" ui-sref="about"><h4>About</h4></li>
-				<li class="col-md-3 router-btn-simple" ui-sref="touchdown"><h4>touchdown</h4></li>
-				<li class="col-md-3 router-btn-simple" ui-sref="discography"><h4>discography</h4></li>
-			</ul>
+			</div>			
 		</div>
-
-		<!-- VIEW'S -->
-		<div class="col-md-12" ui-view></div>
-
-		<script type="text/ng-template" id="/home.html">
-			<div class="pagebox">
-				<div class="container">
-					<div class="row">
-						<h1>HOME</h1>
-						<div class="col-md-5"></div>
-						<div class="col-md-2">
-
-						</div>
-						<div class="col-md-5"></div>
-					</div>
-				</div>
-			</div>
-		<script>	
-
-
-		<script type="text/ng-template" id="/about.html">
-			<div class="pagebox">
-				<div class="container">
-					<div class="row">
-						<h1>ABOUT</h1>
-						<div class="col-md-5"></div>
-						<div class="col-md-2">
-
-						</div>
-						<div class="col-md-5"></div>
-					</div>
-				</div>
-			</div>
-		<script>	
-
-
-		<script type="text/ng-template" id="/touchdown.html">
-			<div class="pagebox">
-				<div class="container">
-					<div class="row">
-						<h1>TOUCHDOWN</h1>
-						<div class="col-md-5"></div>
-						<div class="col-md-2">
-
-						</div>
-						<div class="col-md-5"></div>
-					</div>
-				</div>
-			</div>
-		<script>	
-			
-		<script type="text/ng-template" id="/discography.html">
-			<div class="pagebox">
-				<div class="container">
-					<div class="row">
-						<h1>DISCOGRAPHY</h1>
-						<div class="col-md-5"></div>
-						<div class="col-md-2">
-
-						</div>
-						<div class="col-md-5"></div>
-					</div>
-				</div>
-			</div>
-		<script>			
 
 		<!-- SCRIPT LIBS -->
 		<script src="lib/angular/angular.min.js"></script>
@@ -108,5 +45,10 @@
 		<script src="js/app.js"></script>
 		<script src="js/routes.js"></script>
         <script src="js/indexCtrl.js"></script>    		
+
+		<!-- VIEW'S -->
+		<div class="container">
+			<div class="col-lg-12" ui-view></div>
+		</div>
 	</body>
 </html>	

@@ -2,20 +2,19 @@ body{
 	background-color: black !important;
 }
 
-ul{list-style-type: none;}
-
+h5{color:white}
 .nopadding{padding-right: 0px !important;padding-left: 0px !important;}
 .pagebox{
-	height:650px;
+	border:1px solid white;
+	height:300px;
 }
-.router-btn-simple:hover h4{
+.router-btn-simple:hover h5{
 	color:#02a9a2;
 	cursor: pointer;
 	transition: 0.4s;
 } 	
 .router-btn-simple{
 	margin-top: 5px;
-	list-style: none;
 } 
 
 .logo{
@@ -49,14 +48,11 @@ ul{list-style-type: none;}
 
 /****** TABLET ******/
 @media only screen and (max-width: 1024px) {
-
 }	
 
 @media only screen and (max-width: 768px) {
-
 }	 
 
 /****** MOBILE ******/
 @media only screen and (max-width: 450px) {
-	logo{}
 }	
