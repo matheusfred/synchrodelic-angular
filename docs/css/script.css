@@ -1,10 +1,17 @@
 body{
-	background-color: black !important;
+	background-image: url(../img/bg.png);
+	background-repeat: repeat-x;
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;	
 }
 
-h5{color:white}
+h5{color:white;}
 .nopadding{padding-right: 0px !important;padding-left: 0px !important;}
+
 .pagebox{
+    margin-top: 50px;
 	border:1px solid white;
 	height:300px;
 }
@@ -18,33 +25,31 @@ h5{color:white}
 } 
 
 .logo{
-	height: 100px;
-	width: 470px;
+	height: 120px;
+	width: 500px;
 }
 
-.loading{
-	top: -225px;
-	left: -225px;
-	opacity: 0.3;
-	position: fixed; 
-	z-index: 0;
-	height: 450px;
-	width: 450px;
-}
-#loading {
-	animation: rotation 18s infinite linear;
-	-webkit-animation: rotation 18s infinite linear;
-}
+@keyframes bgcolor {
+    0% {
+        background-color: #800080
+    }
 
-@-webkit-keyframes rotation {
-	from {
-			-webkit-transform: rotate(0deg);
-	}
-	to {
-			-webkit-transform: rotate(359deg);
-	}
-}
+    30% {
+        background-color: #00ff00
+    }
 
+    60% {
+        background-color: #ff0000
+    }
+
+    90% {
+        background-color: #00ff00
+    }
+
+    100% {
+        background-color: #800080
+    }
+}
 
 /****** TABLET ******/
 @media only screen and (max-width: 1024px) {

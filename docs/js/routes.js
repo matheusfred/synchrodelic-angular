@@ -22,8 +22,8 @@ moduleApp.config(function($stateProvider) {
       url: "/touchdown",
       templateUrl: "../pag/touchdown.html"
     })   
-    .state('discography', {
-      url: "/discography",
-      templateUrl: "../pag/discography.html"
+    .state('release', {
+      url: "/release",
+      templateUrl: "../pag/release.html"
     })   
 });
