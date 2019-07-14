@@ -11,7 +11,7 @@
 moduleApp.config(function($stateProvider) {
   $stateProvider
     .state('index', {
-      url: "",
+      url: "#/",
       templateUrl: "../pag/home.html"
     })   
     .state('about', {
