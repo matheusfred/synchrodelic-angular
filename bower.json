@@ -1,11 +1,11 @@
 {
-  "name": "synchrozi",
+  "name": "synchrodelic",
   "version": "1.0.0",
   "moduleType": [
     "node"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/CloseBRF/spacewalk",
+  "homepage": "https://github.com/CloseBRF/synchrodelic",
   "ignore": [
     "**/.*",
     "node_modules",

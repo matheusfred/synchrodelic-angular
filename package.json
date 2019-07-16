@@ -1,9 +1,9 @@
 {
-  "name": "synchrozi",
+  "name": "synchrodelic",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
-  "repository": "https://github.com/CloseBRF/synchrozi",
+  "repository": "https://github.com/CloseBRF/synchrodelic",
   "author": "Matheus Ferreira Frederico <maathe.f@gmail.com>",
   "license": "ISC",
   "devDependencies": {
