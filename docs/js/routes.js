@@ -9,21 +9,9 @@
 /*
 /* ****************************************************** */
 moduleApp.config(function($stateProvider) {
-  $stateProvider
-    .state('index', {
-      url: "",
-      templateUrl: "../pag/home.html"
-    })   
-    .state('about', {
-      url: "/about",
-      templateUrl: "../pag/about.html"
-    })   
-    .state('touchdown', {
-      url: "/touchdown",
-      templateUrl: "../pag/touchdown.html"
-    })   
-    .state('release', {
-      url: "/release",
-      templateUrl: "../pag/release.html"
-    })   
-});
+    $stateProvider
+      .state('index', {url:"", templateUrl: "pag/home.html"})
+      .state('about', {url:"/about", templateUrl: "pag/about.html"})   
+      .state('touchdown', {url:"/touchdown", templateUrl: "pag/touchdown.html"})   
+      .state('release', {url:"/release", templateUrl: "pag/release.html"})   
+  });
