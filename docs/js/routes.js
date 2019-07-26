@@ -13,5 +13,6 @@ moduleApp.config(function($stateProvider) {
       .state('index', {url:"", templateUrl: "pag/home.html"})
       .state('about', {url:"/about", templateUrl: "pag/about.html"})   
       .state('touchdown', {url:"/touchdown", templateUrl: "pag/touchdown.html"})   
-      .state('release', {url:"/release", templateUrl: "pag/release.html"})   
+      .state('release', {url:"/release", templateUrl: "pag/release.html"})
+      .state('postdetail', {url:"/post/:postID", templateUrl: "pag/singlepost.html", controller: "postdetailCtrl"})   
   });

@@ -5,6 +5,7 @@ body{
     animation: bgcolor 10s infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;	
+    color:white !important;
 }
 
 h5{color:white;}
@@ -13,16 +14,12 @@ h5{color:white;}
 .pagebox{
     margin-top: 50px;
 	border:1px solid white;
-	height:300px;
+	height:500px;
 }
-.router-btn-simple:hover h5{
-	color:#02a9a2;
-	cursor: pointer;
-	transition: 0.4s;
-} 	
-.router-btn-simple{
-	margin-top: 5px;
-} 
+
+.navbar-simple{background: black;opacity: 0.8;}
+.navbar-btn-simple:hover h5{color:#02a9a2;cursor: pointer;transition: 0.4s;} 	
+.navbar-btn-simple{margin-top: 5px;} 
 
 .logo{
 	height: 120px;

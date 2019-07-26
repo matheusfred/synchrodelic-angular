@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="moduleApp">
 	<head>
-		<title>Syncrho.Delic - Home.</title>
+		<title>Synchro.Delic - Home.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- CSS LIBS -->
@@ -19,22 +19,22 @@
 
 	<body ng-controller="indexCtrl">		
 		<!-- VIEW'S -->
-		<div class="col-lg-12">
+		<div class="col-lg-12 nopadding">
+			<nav class="navbar-simple">	
+				<div class="col-md-12"> 
+					<div class="row">
+						<div class="col-md-2 text-center navbar-btn-simple" ui-sref="index"><h5>Home</h5></div>
+						<div class="col-md-2 navbar-btn-simple" ui-sref="about"><h5>Forum</h5></div>
+						<!-- <div class="col-md-2 navbar-btn-simple" ui-sref="touchdown"><h5>touchdown</h5></div>
+						<div class="col-md-2 text-center navbar-btn-simple" ui-sref="release"><h5>Release</h5></div> -->
+					</div>
+				</div>	
+			</nav>				
 			<picture>
 				<div class="col-md-12">
 					<img src="img/sync.logo.png" class="logo mx-auto d-block" alt="Synchrodelic Logo">
 				</div>		
 			</picture>	
-			<nav>	
-				<div class="col-md-12"> 
-					<div class="row">
-						<div class="col-md-6 text-center router-btn-simple" ui-sref="index"><h5>Home</h5></div>
-						<!-- <div class="col-md-3 router-btn-simple" ui-sref="about"><h5>About</h5></div>
-						<div class="col-md-3 router-btn-simple" ui-sref="touchdown"><h5>touchdown</h5></div> -->
-						<div class="col-md-6 text-center router-btn-simple" ui-sref="release"><h5>Release</h5></div>
-					</div>
-				</div>	
-			</nav>	
 		</div>
 
 		<!-- SCRIPT LIBS -->
@@ -47,7 +47,8 @@
 		<!-- ANGULAR CONTROLLERS -->
 		<script src="js/app.js"></script>
 		<script src="js/routes.js"></script>
-        <script src="js/indexCtrl.js"></script>    		
+		<script src="js/indexCtrl.js"></script>
+		<script src="js/postdetailCtrl.js"></script>      		
 
 		<!-- VIEW'S -->
 		<div class="container">

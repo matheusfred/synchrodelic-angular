@@ -1,12 +1,13 @@
 <div class="pagebox">
     <div class="container">
         <div class="row">
-            <h1>HOME</h1>
-            <div class="col-md-5"></div>
-            <div class="col-md-2">
-
+            <div class="col-md-12">
+                <article ng-repeat="post in posts">
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.exerpt }}</p>
+                    <a ui-sref="postdetail({postID: {{posts.indexOf(post)}} })">Read more &rarr;</a>
+                </article>
             </div>
-            <div class="col-md-5"></div>
         </div>
     </div>
 </div>
