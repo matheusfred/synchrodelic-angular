@@ -8,13 +8,13 @@
 /* ****************************************************** */
 moduleApp.controller('postdetailCtrl', function($scope, $http, $location){
 
-    var position = $location.$$path.match( /\d+/ );
+    // var position = $location.$$path.match( /\d+/ );
 
-    $http.get('data/posts.json').then(onLocation, offLocation);
+    // $http.get('data/posts.json').then(onLocation, offLocation);
 
-    function onLocation(response){
-        $scope.post = response.data[position[0]];
-    };
+    // function onLocation(response){
+    //     $scope.post = response.data[position[0]];
+    // };
 
-    function offLocation(){ console.log("Algo inesperado ocorreu!")};
+    // function offLocation(){ console.log("Algo inesperado ocorreu!")};
 });  

@@ -8,13 +8,13 @@
 /* ****************************************************** */
 moduleApp.controller('indexCtrl', function($scope, $http){
     
-    $http.get('data/posts.json').then(successCallback, errorCallback); 
+    // $http.get('data/posts.json').then(successCallback, errorCallback); 
 
-    function successCallback(response){
-        $scope.posts = response.data; 
-    }
-    function errorCallback(){
-        console.log("Não foi possivel completar essa requisição!");
-    };
+    // function successCallback(response){
+    //     $scope.posts = response.data; 
+    // }
+    // function errorCallback(){
+    //     console.log("Não foi possivel completar essa requisição!");
+    // };
 
 });  
