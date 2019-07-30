@@ -8,6 +8,8 @@
 /* ****************************************************** */
 var moduleApp = angular.module('moduleApp', ['ngAnimate', 'ui.router']);
 
+moduleApp.run(["$state",function($state){$state.go('index');}]);
+
 var firebaseConfig = {
     apiKey: "AIzaSyAewRtwoFBVo1dKW2Cjk4ZjcolWjldDLwI",
     authDomain: "synchrodelic.firebaseapp.com",

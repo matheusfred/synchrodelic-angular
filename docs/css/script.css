@@ -8,43 +8,72 @@ body{
     color:white !important;
 }
 
-h5{color:white;}
+a{
+    text-decoration: none !important;     
+    -webkit-animation: fontcolor 20s infinite;
+    animation: fontcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;	
+}
+
 .nopadding{padding-right: 0px !important;padding-left: 0px !important;}
 
 .pagebox{
     margin-top: 10px;
-	border:1px solid white;
-	height:450px;
+    background: black;
+    opacity: 0.8;
+	height: auto;
 }
 
 .navbar-simple{background: black;opacity: 0.8;}
 .navbar-btn-simple:hover h5{color:#02a9a2;cursor: pointer;transition: 0.4s;} 	
 .navbar-btn-simple{margin-top: 5px;} 
 
-.logo{
-	height: 120px;
-	width: 600px;
-}
+.logo{height: 120px;width: 600px;}
+.publi-call{height: 200px; width: 200px;}
+.publi-call:hover{opacity: 0.3; transition: 0.4s;}
 
 @keyframes bgcolor {
     0% {
-        background-color: #800080
+        background-color: #620080
     }
 
-    30% {
-        background-color: #00ff00
+    20% {
+        background-color: #0099ff
     }
 
-    60% {
+    50% {
         background-color: #ff0000
     }
 
-    90% {
-        background-color: #00ff00
+    70% {
+        background-color: #0099ff
     }
 
     100% {
-        background-color: #800080
+        background-color: #620080
+    }
+}
+
+@keyframes fontcolor {
+    0% {
+        color: #fffb00;
+    }
+
+    20% {
+        color: #00ff22;
+    }
+
+    50% {
+        color: #0ad7fc;
+    }
+
+    70% {
+        color: #00ff22;
+    }
+
+    100% {
+        color: #fffb00;
     }
 }
 
@@ -57,4 +86,17 @@ h5{color:white;}
 
 /****** MOBILE ******/
 @media only screen and (max-width: 450px) {
+    .logo{height: 90px;width: 280px;}
+    .publi-call{height: 150px; width: 150px;}
+    
+    body{
+        background-image: url(../img/bg-mobile.png);
+        background-repeat: repeat-x;
+        -webkit-animation: bgcolor 20s infinite;
+        animation: bgcolor 10s infinite;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;	
+        color:white !important;        
+    }    
+
 }	

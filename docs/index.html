@@ -22,21 +22,27 @@
 
 	<body ng-controller="indexCtrl">		
 		<!-- VIEW'S -->
-		<div class="col-lg-12 nopadding">
+		<div class="col-md-12 nopadding">
 			<nav class="navbar-simple">	
-				<div class="col-md-12"> 
+				<div class="col-md-12 col-12"> 
 					<div class="row">
-						<div class="col-md-1 text-center navbar-btn-simple" ui-sref="index"><h5>Home</h5></div>
-						<div class="col-md-1 text-center navbar-btn-simple" ui-sref="about"><h5>About</h5></div>
-						<div class="col-md-1 text-center navbar-btn-simple" ui-sref="release"><h5>Release</h5></div>
-						<div class="col-md-1 text-center navbar-btn-simple" ui-sref="event"><h5>Event</h5></div>
-						<a class="col-md-1 text-center navbar-btn-simple" href="https://blog.synchrodelic.com" target="_blank"><h5>Blog</h5></a>
-						<a class="col-md-1 text-center navbar-btn-simple" href="" target="_blank"><h5>Forum</h5></a>
+						<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ui-sref="index">
+							<h5>Home</h5>
+						</div>
+						<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ui-sref="about">
+							<h5>About</h5>
+						</div>
+						<!-- <div class="col-md-1 text-center navbar-btn-simple" ui-sref="release"><h5>Release</h5></div>
+						<div class="col-md-1 text-center navbar-btn-simple" ui-sref="event"><h5>Event</h5></div> -->
+						<a class="col-md-1 col-4 text-center navbar-btn-simple" href="https://blog.synchrodelic.com" rel="noopener noreferrer" target="_blank">
+							<h5>Blog</h5>
+						</a>
+						<!-- <a class="col-md-1 text-center navbar-btn-simple" href="" target="_blank"><h5>Forum</h5></a> -->
 					</div>
 				</div>	
 			</nav>				
 			<picture>
-				<div class="col-md-12">
+				<div class="col-md-12 mt-md-4">
 					<img src="img/sync.logo.png" class="logo mx-auto d-block" alt="Logo">
 				</div>		
 			</picture>	
