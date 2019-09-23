@@ -1,24 +1,13 @@
 <div class="container">
     <div class="col-md-12 nopadding mt-md-5 mb-5">
         <div class="row">
-            <div class="col-md-4 mb-5">
-                <h5 class="text-center">Blog</h5>
-                <a href="https://blog.synchrodelic.com" rel="noopener noreferrer" target="_blank">
-                    <img src="../img/blog.png" class="publi-call mx-auto d-block" alt="synchrodelic blog">
-                </a>
-            </div>
-            <div class="col-md-4 mb-5">
-                <h5 class="text-center">Instagram</h5>
-                <a  href="https://www.instagram.com/synchrodelic/" rel="noopener noreferrer" target="_blank">
-                    <img src="../img/instagram.png" class="publi-call mx-auto d-block" alt="synchrodelic instagram">
-                </a>   
-            </div> 
-            <div class="col-md-4 mb-5">            
-                <h5 class="text-center">Discord</h5> 
-                <a href="https://discord.gg/NZaMtKj" rel="noopener noreferrer" target="_blank">  
-                    <img src="../img/discord.png" class="publi-call mx-auto d-block" alt="synchrodelic discord">
+            <div id="loading-bar-container"></div>
+            <div class="col-md-4 mb-5" ng-repeat="social in socials">            
+                <h5 class="text-center">{{social.name}}</h5> 
+                <a href="{{social.url}}" rel="noopener noreferrer" target="_blank">  
+                    <img src="{{social.src}}" class="publi-call mx-auto d-block" alt="{{social.alt}}">
                 </a>  
-            </div>             
+            </div>                                     
         </div>     
     </div>
 

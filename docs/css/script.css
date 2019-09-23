@@ -16,6 +16,10 @@ a{
     animation-direction: alternate;	
 }
 
+#loading-bar .bar {
+    position: relative;
+  }
+
 .nopadding{padding-right: 0px !important;padding-left: 0px !important;}
 
 .pagebox{
@@ -32,6 +36,16 @@ a{
 .logo{height: 120px;width: 600px;}
 .publi-call{height: 200px; width: 200px;}
 .publi-call:hover{opacity: 0.3; transition: 0.4s;}
+
+/* TRANSIÇÃO DE PÁGINAS */
+
+.transition.ng-enter {
+    transition: 0.5s linear all;
+    opacity:0;
+  }
+  .transition.ng-enter.ng-enter-active {
+    opacity:1;
+  }
 
 @keyframes bgcolor {
     0% {

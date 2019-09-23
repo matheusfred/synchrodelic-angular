@@ -9,6 +9,7 @@
 var moduleApp = angular.module('moduleApp', ['ngAnimate', 'ui.router', 'angular-loading-bar'])
 .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.includeSpinner  = true;
+    cfpLoadingBarProvider.latencyThreshold = 500;
 }]);
 
 moduleApp.run(["$state",function($state){$state.go('index');}]);
