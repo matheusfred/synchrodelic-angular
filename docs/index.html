@@ -12,37 +12,50 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 		<link type="text/css" rel="stylesheet" href="css/script.css" />
-		<link type="text/css" rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+		<link type='text/css' rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
 		<link type="text/css" rel="stylesheet" href="lib/angular-loadingbar/loading-bar.min.css" />     
 	</head>
 
 	<body ng-controller="indexCtrl">		
 		<!-- VIEW'S -->
-		<div class="col-md-12 nopadding">
-			<nav class="navbar-simple">	
+			<nav class="col-md-12 nopadding navbar-simple">	
 				<div class="col-md-12 col-12"> 
 					<div class="row">
 						<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/');" ui-sref="index">
-							<h5>Home</h5>
+							<h5>{{ 'MENU_HOME' | translate }}</h5>
 						</div>
 						<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/about');" ui-sref="about">
-							<h5>About</h5>
+							<h5>{{ 'MENU_ABOUT' | translate }}</h5>
 						</div>
 						<!-- <div class="col-md-1 text-center navbar-btn-simple" ui-sref="release"><h5>Release</h5></div>
 						<div class="col-md-1 text-center navbar-btn-simple" ui-sref="event"><h5>Event</h5></div> -->
-						<a class="col-md-1 col-4 text-center navbar-btn-simple" href="https://blog.synchrodelic.com" rel="noopener noreferrer" target="_blank">
+						<a class="col-md-1 col-2 text-center navbar-btn-simple" href="https://blog.synchrodelic.com" rel="noopener noreferrer" target="_blank">
 							<h5>Blog</h5>
 						</a>
 						<!-- <a class="col-md-1 text-center navbar-btn-simple" href="" target="_blank"><h5>Forum</h5></a> -->
+						
+						<div class="col-md-2 offset-md-6 router-btn-simple">
+							<div class="row" aria-labelledby="dropdownLang">
+								<button class="col-md-6"  >
+									<img src="img/euaflag.png" ng-class="{selected: statusmenu === 'en'}" 
+									alt="American flag" type="button" ng-click="changeStatus('en')">
+								</button>
+								<button class="col-md-6" >
+									<img src="img/brasilflag.png" ng-class="{selected: statusmenu === 'br'}" 
+									alt="Brazil flag" type="button" ng-click="changeStatus('br')">
+								</button>
+							</div>														
+						</div>
 					</div>
 				</div>	
 			</nav>			
 			<picture>
 				<div class="col-md-12 mt-md-4">
+					<div class="row">
 					<img src="img/sync.logo.png" class="logo mx-auto d-block" alt="Logo">
+					</div>	
 				</div>		
 			</picture>	
-		</div>
 
 		<!-- SCRIPT LIBS -->
 		<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
@@ -50,13 +63,16 @@
 		<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>	
 	    <script type="text/javascript" src="lib/angular-loadingbar/loading-bar.min.js"></script>
 	    <script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
-	    <script type="text/javascript" src="lib/angular-ui-router/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="lib/angular-translate/angular-translate.js"></script>
+		<script type="text/javascript" src="lib/angular-ui-router/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="lib/angular-translate/angular-translate.min.js"></script>
 
 		<!-- ANGULAR CONTROLLERS -->
 		<script type="text/javascript" src="js/app.js"></script>
 		<script type="text/javascript" src="js/routes.js"></script>
 		<script type="text/javascript" src="js/indexCtrl.js"></script>
-		<script type="text/javascript" src="js/postdetailCtrl.js"></script>      		
+		<script type="text/javascript" src="js/translation.js"></script>	   		
+		<script type="text/javascript" src="js/postdetailCtrl.js"></script>   
 
 		<!-- VIEW'S -->
 		<div class="container">

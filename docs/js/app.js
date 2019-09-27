@@ -6,14 +6,17 @@
 /* Desenvolvido por Matheus Ferreira <maathe.f@gmail.com>
 /*
 /* ****************************************************** */
-var moduleApp = angular.module('moduleApp', ['ngAnimate', 'ui.router', 'angular-loading-bar'])
+var moduleApp = angular.module('moduleApp', ['ngAnimate','pascalprecht.translate', 'ui.router', 'angular-loading-bar'])
 .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.includeSpinner  = true;
     cfpLoadingBarProvider.latencyThreshold = 500;
 }]);
+moduleApp.config(['$translateProvider', function ($translateProvider) {
+    $translateProvider.preferredLanguage('br');
+    $translateProvider.useSanitizeValueStrategy('sceParameters');
+  }]);
 
 moduleApp.run(["$state",function($state){$state.go('index');}]);
-
 // var firebaseConfig = {
 //     apiKey: "AIzaSyAewRtwoFBVo1dKW2Cjk4ZjcolWjldDLwI",
 //     authDomain: "synchrodelic.firebaseapp.com",

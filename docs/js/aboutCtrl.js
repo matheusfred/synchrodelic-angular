@@ -6,7 +6,7 @@
 /* Desenvolvido por Matheus Ferreira <maathe.f@gmail.com>
 /*
 /* ****************************************************** */
-moduleApp.controller('postdetailCtrl', function($scope, $http, $location){
+moduleApp.controller('aboutCtrl', function($scope, $translate, cfpLoadingBar){
 
     // var position = $location.$$path.match( /\d+/ );
 
@@ -16,5 +16,5 @@ moduleApp.controller('postdetailCtrl', function($scope, $http, $location){
     //     $scope.post = response.data[position[0]];
     // };
 
-    // function offLocation(){ console.log("Algo inesperado ocorreu!")};
+    // function offLocation(){ console.log("Algo inesperado ocorreu!")}; 
 });  

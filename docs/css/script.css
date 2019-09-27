@@ -37,6 +37,12 @@ a{
 .publi-call{height: 200px; width: 200px;}
 .publi-call:hover{opacity: 0.3; transition: 0.4s;}
 
+.router-btn-simple img{height: 20px;width: 50px;}
+.router-btn-simple button{ background-color: transparent; border: none; margin-top: 2px; padding: }
+
+.selected{border: blueviolet 1px solid;border-radius:5px;}
+.router-btn-simple button:hover img{border:grey 1px solid;}
+
 /* TRANSIÇÃO DE PÁGINAS */
 
 .transition.ng-enter {
