@@ -26,10 +26,10 @@ moduleApp.controller('indexCtrl', function($scope, $location, $translate, cfpLoa
     
     $scope.socials =     
         [{
-            src: 'img/blog.png',     
-            url: 'https://blog.synchrodelic.com',  
-            name: 'Blog',
-            alt: 'synchrodelic blog'             
+            src: 'img/twitch.png',     
+            url: 'https://www.twitch.tv/synchrodelic',  
+            name: 'Twitch',
+            alt: 'Synchrodelic Hi-synchedelic'             
         },
         {
             src: 'img/instagram.png',     
@@ -38,10 +38,10 @@ moduleApp.controller('indexCtrl', function($scope, $location, $translate, cfpLoa
             alt: 'synchrodelic instagram' 
         },
         {
-            src: 'img/discord.png',     
-            url: 'https://discord.gg/NZaMtKj',  
-            name: 'Discord',
-            alt: 'synchrodelic discord' 
+            src: 'img/youtube.png',     
+            url: 'https://www.youtube.com/channel/UC0RYnTEbL3alGdpFLjihwRg',  
+            name: 'Youtube',
+            alt: 'synchrodelic chanel' 
         }];     
 
     // $http.get('data/posts.json').then(successCallback, errorCallback); 

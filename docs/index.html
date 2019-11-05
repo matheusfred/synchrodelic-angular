@@ -22,19 +22,19 @@
 				<div class="col-md-12 col-12"> 
 					<div class="row">
 						<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/');" ui-sref="index">
-							<h5>{{ 'MENU_HOME' | translate }}</h5>
+							<h5 translate="MENU_HOME"></h5>
 						</div>
 						<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/about');" ui-sref="about">
-							<h5>{{ 'MENU_ABOUT' | translate }}</h5>
+							<h5 translate="MENU_ABOUT"></h5>
 						</div>
 						<!-- <div class="col-md-1 text-center navbar-btn-simple" ui-sref="release"><h5>Release</h5></div>
 						<div class="col-md-1 text-center navbar-btn-simple" ui-sref="event"><h5>Event</h5></div> -->
-						<a class="col-md-1 col-2 text-center navbar-btn-simple" href="https://blog.synchrodelic.com" rel="noopener noreferrer" target="_blank">
+						<a class="col-md-1 col-4 text-center navbar-btn-simple" href="https://blog.synchrodelic.com" rel="noopener noreferrer" target="_blank">
 							<h5>Blog</h5>
 						</a>
 						<!-- <a class="col-md-1 text-center navbar-btn-simple" href="" target="_blank"><h5>Forum</h5></a> -->
 						
-						<div class="col-md-2 offset-md-6 router-btn-simple">
+						<div class="col-md-2 offset-md-6 hidden router-btn-simple">
 							<div class="row" aria-labelledby="dropdownLang">
 								<button class="col-md-6"  >
 									<img src="img/euaflag.png" ng-class="{selected: statusmenu === 'en'}" 
@@ -50,9 +50,9 @@
 				</div>	
 			</nav>			
 			<picture>
-				<div class="col-md-12 mt-md-4">
+				<div class="col-md-12 mt-md-4 hidden">
 					<div class="row">
-					<img src="img/sync.logo.png" class="logo mx-auto d-block" alt="Logo">
+						<img src="img/sync.logo.png" class="logo mx-auto d-block" alt="Logo">
 					</div>	
 				</div>		
 			</picture>	

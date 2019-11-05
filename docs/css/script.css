@@ -16,10 +16,8 @@ a{
     animation-direction: alternate;	
 }
 
-#loading-bar .bar {
-    position: relative;
-  }
-
+#loading-bar .bar {position: relative;}
+.hidden-large{display: none;}  
 .nopadding{padding-right: 0px !important;padding-left: 0px !important;}
 
 .pagebox{
@@ -102,13 +100,15 @@ a{
 }	
 
 @media only screen and (max-width: 768px) {
+    .hidden{display: none;}
+    .hidden-large{display: inline;}
+    .logo-cel{
+        height: 260px;
+    }
 }	 
 
 /****** MOBILE ******/
 @media only screen and (max-width: 450px) {
-    .logo{height: 90px;width: 280px;}
-    .publi-call{height: 150px; width: 150px;}
-    
     body{
         background-image: url(../img/bg-mobile.png);
         background-repeat: repeat-x;

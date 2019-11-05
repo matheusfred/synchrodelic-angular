@@ -1,19 +1,23 @@
+<div class="col-md-12 nopadding hidden-large">
+    <img src="../img/star.png" class="logo-cel mt-5" alt="">
+</div>
+
 <div class="container">
-    <div class="col-md-12 nopadding mt-md-5 mb-5">
+    <div class="col-md-12 nopadding mt-md-5 mb-5 hidden">
         <div class="row">
             <div id="loading-bar-container"></div>
             <div class="col-md-4 mb-5" ng-repeat="social in socials">            
-                <h5 class="text-center">{{social.name}}</h5> 
                 <a href="{{social.url}}" rel="noopener noreferrer" target="_blank">  
                     <img src="{{social.src}}" class="publi-call mx-auto d-block" alt="{{social.alt}}">
                 </a>  
+                <h5 class="text-center">{{social.name}}</h5>
             </div>                                     
         </div>     
     </div>
 
-        <!-- <article ng-repeat="post in posts">
-            <h1>{{ post.title }}</h1>
-            <p>{{ post.exerpt }}</p>
-            <a ui-sref="postdetail({postID: {{posts.indexOf(post)}} })">Read more &rarr;</a>
-        </article> -->
+    <!-- <article ng-repeat="post in posts">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.exerpt }}</p>
+        <a ui-sref="postdetail({postID: {{posts.indexOf(post)}} })">Read more &rarr;</a>
+    </article> -->
 </div>
