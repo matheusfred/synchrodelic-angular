@@ -1,6 +1,8 @@
 body{
 	background-image: url(../img/bg.png);
-	background-repeat: repeat-x;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     -webkit-animation: bgcolor 20s infinite;
     animation: bgcolor 10s infinite;
     -webkit-animation-direction: alternate;
