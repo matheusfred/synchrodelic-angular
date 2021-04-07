@@ -13,6 +13,7 @@
     "grunt-contrib-jshint": "^0.11.3"
   },
   "dependencies": {
+    "@uirouter/angular": "^8.0.0",
     "angularfire": "^2.3.0",
     "angularfire2": "^5.0.0-rc.3",
     "firebase": "^4.6.1"

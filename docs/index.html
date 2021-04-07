@@ -2,18 +2,21 @@
 <html ng-app="moduleApp">
 	<head>
 		<title>Synchrodelic - Hubpage</title>
-		<meta name="author" content="Equipe Synchrodelic">
-		<meta name="keywords" content="synchrodelic,psytrance">
-		<meta name="viewport" content="width=device-width, user-scalable=no" />
-		<meta name="description" content="Sincronizando a cultura e movimento Psytrance pela interwebs, participe de nossa comunidade, seja quem quiser e respeite o próximo." >
-
+		<meta name="author" content="Equipe Synchrodelic" />
+		<meta name="keywords" content="synchrodelic,psytrance" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Sincronizando a cultura e movimento Psytrance pela interwebs, participe de nossa comunidade, seja quem quiser e respeite o próximo." />
 		<!-- CSS LIBS -->
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<!-- <link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
 
 		<link type="text/css" rel="stylesheet" href="css/script.css" />
 		<link type='text/css' rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
-		<link type="text/css" rel="stylesheet" href="lib/angular-loadingbar/loading-bar.min.css" />     
+		<link type="text/css" rel="stylesheet" href="lib/angular-loadingbar/loading-bar.min.css" />   
+		
+		<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
 	</head>
 
 	<body ng-controller="indexCtrl">		
@@ -24,9 +27,12 @@
 						<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/');" ui-sref="index">
 							<h5 translate="MENU_HOME"></h5>
 						</div>
+						<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/release');" ui-sref="release">
+							<h5 translate="RELEASE"></h5>
+						</div>							
 						<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/about');" ui-sref="about">
 							<h5 translate="MENU_ABOUT"></h5>
-						</div>
+						</div>					
 						<!-- <div class="col-md-1 text-center navbar-btn-simple" ui-sref="release"><h5>Release</h5></div>
 						<div class="col-md-1 text-center navbar-btn-simple" ui-sref="event"><h5>Event</h5></div> -->
 						<a class="col-md-1 col-4 text-center navbar-btn-simple" href="https://blog.synchrodelic.com" rel="noopener noreferrer" target="_blank">
@@ -56,7 +62,6 @@
 					</div>	
 				</div>		
 			</picture>	
-
 		<!-- SCRIPT LIBS -->
 		<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
 		<script type="text/javascript" src="lib/angular/angular.min.js"></script>
@@ -64,7 +69,7 @@
 	    <script type="text/javascript" src="lib/angular-loadingbar/loading-bar.min.js"></script>
 	    <script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
 		<script type="text/javascript" src="lib/angular-translate/angular-translate.js"></script>
-		<script type="text/javascript" src="lib/angular-ui-router/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 		<script type="text/javascript" src="lib/angular-translate/angular-translate.min.js"></script>
 
 		<!-- ANGULAR CONTROLLERS -->
@@ -72,11 +77,15 @@
 		<script type="text/javascript" src="js/routes.js"></script>
 		<script type="text/javascript" src="js/indexCtrl.js"></script>
 		<script type="text/javascript" src="js/translation.js"></script>	   		
-		<script type="text/javascript" src="js/postdetailCtrl.js"></script>   
+		
+		<!-- ANGULAR CONTROLLERS DASHBOARD -->
+		<script type="text/javascript" src="js/dashboard/adminCtrl.js"></script>
+		<script type="text/javascript" src="js/dashboard/postdetailCtrl.js"></script>  
+		<script type="text/javascript" src="js/dashboard/dashboardCtrl.js"></script>  
 
 		<!-- VIEW'S -->
 		<div class="container">
 			<div class="col-lg-12 transition" ui-view></div>
 		</div>
 	</body>
-</html>	
+</html>

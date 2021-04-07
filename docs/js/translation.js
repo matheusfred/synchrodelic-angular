@@ -3,6 +3,7 @@ moduleApp.config(['$translateProvider', function ($translateProvider) {
     $translateProvider.translations('en', {
       'MENU_HOME': 'Home',
       'MENU_ABOUT': 'About',
+      'RELEASE': 'Release',
 
       'ABOUT_TITTLE': 'About us',
       'ABOUT_SUBTITTLE': 'Synchronizing the culture of psytrance',
@@ -17,6 +18,7 @@ moduleApp.config(['$translateProvider', function ($translateProvider) {
     $translateProvider.translations('br', {
       'MENU_HOME': 'Inicio',
       'MENU_ABOUT': 'Sobre',
+      'RELEASE': 'Highlights',
 
       'ABOUT_TITTLE': 'Sobre nós',
       'ABOUT_SUBTITTLE': 'Sincronizando a cultura psytrance.',

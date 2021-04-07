@@ -7,26 +7,33 @@
 /*
 /* ****************************************************** */
 var moduleApp = angular.module('moduleApp', ['ngAnimate','pascalprecht.translate', 'ui.router', 'angular-loading-bar'])
+
+/* LOADING BAR */
 .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.includeSpinner  = true;
     cfpLoadingBarProvider.latencyThreshold = 500;
 }]);
+
+/* TRANSLATE PROVIDE */
 moduleApp.config(['$translateProvider', function ($translateProvider) {
     $translateProvider.preferredLanguage('br');
     $translateProvider.useSanitizeValueStrategy('sceParameters');
-  }]);
+}]);
 
+/* STATE FIXMENT */
 moduleApp.run(["$state",function($state){$state.go('index');}]);
-// var firebaseConfig = {
-//     apiKey: "AIzaSyAewRtwoFBVo1dKW2Cjk4ZjcolWjldDLwI",
-//     authDomain: "synchrodelic.firebaseapp.com",
-//     databaseURL: "https://synchrodelic.firebaseio.com",
-//     projectId: "synchrodelic",
-//     storageBucket: "synchrodelic.appspot.com",
-//     messagingSenderId: "876948348825",
-//     appId: "1:876948348825:web:769fae88e4602371"
-//   };
-  
-//   // Initialize Firebase
-//   firebase.initializeApp(firebaseConfig);
-  
+
+/* DATABASE */
+const config = {
+  apiKey: "AIzaSyCxM-5uDLdaVeu1DEaH3PwsmPAvfU2jbNo",
+  authDomain: "synchrodelic-bceb6.firebaseapp.com",
+  projectId: "synchrodelic-bceb6",
+  storageBucket: "synchrodelic-bceb6.appspot.com",
+  messagingSenderId: "467161613",
+  appId: "1:467161613:web:6ded2d1d3342a789267b44",
+  measurementId: "G-C6X7XH57R9"
+
+};
+
+firebase.initializeApp(config);
+firebase.analytics();
