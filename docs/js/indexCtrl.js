@@ -6,23 +6,23 @@
 /* Desenvolvido por Matheus Ferreira <maathe.f@gmail.com>
 /*
 /* ****************************************************** */
-moduleApp.controller('indexCtrl', function($scope, $location, $translate, cfpLoadingBar){
-    
-    $scope.loading = function(btn){
-        var btn = btn;
-        if($location.$$path == btn){return}
-        else{cfpLoadingBar.start();cfpLoadingBar.complete();}
-    };
+moduleApp.controller('indexCtrl', function($scope){
+    // $location, $translate, cfpLoadingBar    
+    // $scope.loading = function(btn){
+    //     var btn = btn;
+    //     if($location.$$path == btn){return}
+    //     else{cfpLoadingBar.start();cfpLoadingBar.complete();}
+    // };
 
-    $scope.loading();
+    // $scope.loading();
 
-    $scope.statusmenu = 'br';
-	$scope.changeStatus = function(newValue){
-        cfpLoadingBar.start();
-        $scope.statusmenu =  newValue;
-        $translate.use(newValue);
-        cfpLoadingBar.complete();
-    };
+    // $scope.statusmenu = 'br';
+	// $scope.changeStatus = function(newValue){
+    //     cfpLoadingBar.start();
+    //     $scope.statusmenu =  newValue;
+    //     $translate.use(newValue);
+    //     cfpLoadingBar.complete();
+    // };
     
     $scope.socials =     
         [{

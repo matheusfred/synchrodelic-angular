@@ -1,0 +1,5 @@
+.scene{
+    width: 90%;
+    perspective-origin: 500px 700px;
+    perspective: 3000px;
+}

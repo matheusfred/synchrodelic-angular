@@ -10,82 +10,95 @@
 		<!-- <link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
 
-		<link type="text/css" rel="stylesheet" href="css/script.css" />
-		<link type='text/css' rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
-		<link type="text/css" rel="stylesheet" href="lib/angular-loadingbar/loading-bar.min.css" />   
+		<!-- CSS LIBS -->
+		<link rel="stylesheet" type="text/css" href="css/script.css" />
+		<link rel="stylesheet" type="text/css" href="css/star.css" />
 		
-		<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
-		<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
-		<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
-	</head>
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/angular-loading-bar/loading-bar.min.css"/>
 
-	<body ng-controller="indexCtrl">		
-		<!-- VIEW'S -->
-			<nav class="col-md-12 nopadding navbar-simple">	
-				<div class="col-md-12 col-12"> 
-					<div class="row">
-						<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/');" ui-sref="index">
-							<h5 translate="MENU_HOME"></h5>
-						</div>
-						<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/release');" ui-sref="release">
-							<h5 translate="RELEASE"></h5>
-						</div>							
-						<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/about');" ui-sref="about">
-							<h5 translate="MENU_ABOUT"></h5>
-						</div>					
-						<!-- <div class="col-md-1 text-center navbar-btn-simple" ui-sref="release"><h5>Release</h5></div>
-						<div class="col-md-1 text-center navbar-btn-simple" ui-sref="event"><h5>Event</h5></div> -->
-						<a class="col-md-1 col-4 text-center navbar-btn-simple" href="https://blog.synchrodelic.com" rel="noopener noreferrer" target="_blank">
-							<h5>Blog</h5>
-						</a>
-						<!-- <a class="col-md-1 text-center navbar-btn-simple" href="" target="_blank"><h5>Forum</h5></a> -->
-						
-						<div class="col-md-2 offset-md-6 hidden router-btn-simple">
-							<div class="row" aria-labelledby="dropdownLang">
-								<button class="col-md-6"  >
-									<img src="img/euaflag.png" ng-class="{selected: statusmenu === 'en'}" 
-									alt="American flag" type="button" ng-click="changeStatus('en')">
-								</button>
-								<button class="col-md-6" >
-									<img src="img/brasilflag.png" ng-class="{selected: statusmenu === 'br'}" 
-									alt="Brazil flag" type="button" ng-click="changeStatus('br')">
-								</button>
-							</div>														
-						</div>
-					</div>
-				</div>	
-			</nav>			
-			<picture>
-				<div class="col-md-12 mt-md-4 hidden">
-					<div class="row">
-						<img src="img/sync.logo.png" class="logo mx-auto d-block" alt="Logo">
-					</div>	
-				</div>		
-			</picture>	
 		<!-- SCRIPT LIBS -->
 		<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="lib/angular/angular.min.js"></script>
-		<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>	
-	    <script type="text/javascript" src="lib/angular-loadingbar/loading-bar.min.js"></script>
+		<script type="text/javascript" src="lib/angular/angular.min.js"></script>	
+	    <script type="text/javascript" src="lib/angular-loading-bar/loading-bar.min.js"></script>
 	    <script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
-		<script type="text/javascript" src="lib/angular-translate/angular-translate.js"></script>
-		<script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
-		<script type="text/javascript" src="lib/angular-translate/angular-translate.min.js"></script>
+		<script type="text/javascript" src="lib/angular-ui-router/angular-ui-router.min.js"></script>
 
 		<!-- ANGULAR CONTROLLERS -->
 		<script type="text/javascript" src="js/app.js"></script>
 		<script type="text/javascript" src="js/routes.js"></script>
-		<script type="text/javascript" src="js/indexCtrl.js"></script>
-		<script type="text/javascript" src="js/translation.js"></script>	   		
-		
-		<!-- ANGULAR CONTROLLERS DASHBOARD -->
-		<script type="text/javascript" src="js/dashboard/adminCtrl.js"></script>
-		<script type="text/javascript" src="js/dashboard/postdetailCtrl.js"></script>  
-		<script type="text/javascript" src="js/dashboard/dashboardCtrl.js"></script>  
+		<script type="text/javascript" src="js/indexCtrl.js"></script>  
 
+		<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+    
+		<script type="text/javascript">
+			var exampleCallback = function() {
+				console.log('Order complete!');
+			};
+		
+			window.EBWidgets.createWidget({
+				widgetType: 'checkout',
+				eventId: '164597368159',
+				modal: true,
+				modalTriggerElementId: 'eventbrite-widget-modal-trigger-164597368159',
+				onOrderComplete: exampleCallback
+			});
+		</script>
+	</head>
+
+	<body ng-controller="indexCtrl" class="container-fluid">
+		<div class="row">	
 		<!-- VIEW'S -->
-		<div class="container">
-			<div class="col-lg-12 transition" ui-view></div>
-		</div>
+			<nav class="col-md-12 navbar-simple">	
+				<div class="row mt-4">
+					<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/');" ui-sref="index">
+						<h5 translate="MENU_HOME">Home</h5>
+					</div>
+
+					<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/tickets');">
+						<noscript>
+							<a href="https://www.eventbrite.com/e/synchrodelic-island-halloween-edition-2021-tickets-164597368159" rel="noopener noreferrer" target="_blank">
+						</noscript>
+							<button id="eventbrite-widget-modal-trigger-164597368159" type="button">Buy Tickets</button>
+						<noscript>
+							</a>
+						</noscript>
+					</div>	
+
+					<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/about');" ui-sref="about">
+						<h5 translate="MENU_ABOUT">About</h5>
+					</div>					
+					<!-- <div class="col-md-1 text-center navbar-btn-simple" ui-sref="release"><h5>Release</h5></div>
+					<div class="col-md-1 text-center navbar-btn-simple" ui-sref="event"><h5>Event</h5></div> -->
+					
+					<!-- <div class="col-md-2 offset-md-6 hidden router-btn-simple">
+						<div class="row" aria-labelledby="dropdownLang">
+							<button class="col-md-6"  >
+								<img src="img/euaflag.png" ng-class="{selected: statusmenu === 'en'}" 
+								alt="American flag" type="button" ng-click="changeStatus('en')">
+							</button>
+							<button class="col-md-6" >
+								<img src="img/brasilflag.png" ng-class="{selected: statusmenu === 'br'}" 
+								alt="Brazil flag" type="button" ng-click="changeStatus('br')">
+							</button>
+						</div>														
+					</div> -->
+				</div>
+			</nav>		
+
+			<div class="container">	
+				<div class="row">
+					<div class="col-md-12 hidden">
+						<img src="img/sync.logo.png" class="logo mx-auto d-block" alt="Logo">
+					</div>		
+
+					<!-- VIEW'S -->
+					<div class="col-lg-12 transition" ui-view></div>
+				</div>	
+			</div>
+		</div>	
+
+		<!-- BODY SCRIPT -->
+		<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>

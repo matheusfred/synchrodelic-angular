@@ -1,21 +1,18 @@
 {
-  "name": "synchrodelic",
+  "name": "Teste",
   "version": "1.0.0",
-  "description": "",
+  "description": "Environmental Testing",
   "main": "index.html",
-  "repository": "https://github.com/CloseBRF/synchrodelic",
-  "author": "Matheus Ferreira Frederico <maathe.f@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Matheus Ferreira Frederico <mfrederico@holidaybuilders.com>",
   "license": "ISC",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-connect": "^0.11.2",
     "grunt-contrib-jshint": "^0.11.3"
-  },
-  "dependencies": {
-    "@uirouter/angular": "^8.0.0",
-    "angularfire": "^2.3.0",
-    "angularfire2": "^5.0.0-rc.3",
-    "firebase": "^4.6.1"
   }
 }
