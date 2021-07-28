@@ -4,6 +4,6 @@ Allow: /
 
 User-agent: *
 Disallow: /search
-Allow: www.synchrodelic.com/
+Allow: www.synchrodelic.net/
 
 Sitemap: https://synchrodelicbr.blogspot.com/sitemap.xml
