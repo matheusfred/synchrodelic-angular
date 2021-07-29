@@ -6,12 +6,19 @@
 /* Desenvolvido por Matheus Ferreira <maathe.f@gmail.com>
 /* $translate,
 /* ****************************************************** */
-moduleApp.controller('indexCtrl', function($scope, $location,  cfpLoadingBar ){   
-    $scope.loading = function(btn){
-        var btn = btn;
-        if($location.$$path == btn){return}
-        else{cfpLoadingBar.start();cfpLoadingBar.complete();}
-    };
+moduleApp.controller('indexCtrl', function($scope, $location, cfpLoadingBar ){   
+    $scope.statusmenu = 'home';
+    
+    $scope.loading = function(btn){     
+        $scope.statusmenu =  btn;
+
+        if($location.$$path == btn){
+            return
+        } else {
+            cfpLoadingBar.start();
+            cfpLoadingBar.complete();
+        }
+    };	
 
     $scope.loading();
 
@@ -42,14 +49,4 @@ moduleApp.controller('indexCtrl', function($scope, $location,  cfpLoadingBar ){
             name: 'Youtube',
             alt: 'synchrodelic chanel' 
         }];     
-
-    // $http.get('data/posts.json').then(successCallback, errorCallback); 
-
-    // function successCallback(response){
-    //     $scope.posts = response.data; 
-    // }
-    // function errorCallback(){
-    //     console.log("Não foi possivel completar essa requisição!");
-    // };
-
 });  

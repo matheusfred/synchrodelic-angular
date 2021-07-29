@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html ng-app="moduleApp">
 	<head>
-		<title>Synchrodelic - Hubpage</title>
+		<title>Synchrodelic Festival</title>
 		<meta name="author" content="Synchrodelic" />
 		<meta name="keywords" content="synchrodelic,psytrance" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="" />
 		<!-- CSS LIBS -->
-		<!-- <link rel="icon" href="favicon.ico" type="image/x-icon">
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 		<!-- CSS LIBS -->
 		<link rel="stylesheet" type="text/css" href="css/script.css" />
@@ -50,23 +50,29 @@
 		<div class="row">	
 		<!-- VIEW'S -->
 			<nav class="col-md-12 navbar-simple">	
-				<div class="row mt-4">
+				<div class="row mx-5 d-flex justify-content-center">
 					<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/');" ui-sref="index">
-						<h5 translate="MENU_HOME">Home</h5>
+						<button class="btn" type="button">
+							<h5 translate="MENU_HOME" ng-class="{selected: statusmenu === '/'}" class="m-0">Home</h5>
+						</button>
 					</div>
 
 					<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/tickets');">
 						<noscript>
 							<a href="https://www.eventbrite.com/e/synchrodelic-island-halloween-edition-2021-tickets-164597368159" rel="noopener noreferrer" target="_blank">
 						</noscript>
-							<button id="eventbrite-widget-modal-trigger-164597368159" type="button">Buy Tickets</button>
+							<button class="btn" id="eventbrite-widget-modal-trigger-164597368159" type="button">
+								<h5 class="m-0" ng-class="{selected: statusmenu === 'tickets'}">Tickets</h5>
+							</button>
 						<noscript>
 							</a>
 						</noscript>
 					</div>	
 
 					<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/about');" ui-sref="about">
-						<h5 translate="MENU_ABOUT">About</h5>
+						<button class="btn" type="button">
+							<h5 translate="MENU_ABOUT" ng-class="{selected: statusmenu === '/about'}" class="m-0">About</h5>
+						</button>
 					</div>					
 					<!-- <div class="col-md-1 text-center navbar-btn-simple" ui-sref="release"><h5>Release</h5></div>
 					<div class="col-md-1 text-center navbar-btn-simple" ui-sref="event"><h5>Event</h5></div> -->
@@ -86,16 +92,18 @@
 				</div>
 			</nav>		
 
-			<div class="container">	
+			<div class="container mt-5">	
 				<div class="row">
 					<div class="col-md-12 hidden">
 						<img src="img/sync.logo.png" class="logo mx-auto d-block" alt="Logo">
 					</div>		
 
 					<!-- VIEW'S -->
-					<div class="col-lg-12 transition" ui-view></div>
+					<div class="col-lg-12 transition mt-5" ui-view></div>
 				</div>	
 			</div>
+
+			<div class="col-md-12 footer-simple"></div>
 		</div>	
 
 		<!-- BODY SCRIPT -->
