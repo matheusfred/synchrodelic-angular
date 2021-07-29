@@ -7,7 +7,7 @@
 /* $translate,
 /* ****************************************************** */
 moduleApp.controller('indexCtrl', function($scope, $location, cfpLoadingBar ){   
-    $scope.statusmenu = 'home';
+    $scope.statusmenu = '/';
     
     $scope.loading = function(btn){     
         $scope.statusmenu =  btn;
