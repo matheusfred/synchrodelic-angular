@@ -9,9 +9,10 @@
 moduleApp.controller('indexCtrl', function($scope, $location, cfpLoadingBar ){   
     $scope.statusmenu = '/';
     
-    $scope.loading = function(btn){     
-        $scope.statusmenu =  btn;
-
+    $scope.loading = function(btn){ 
+        if(btn != undefined){    
+            $scope.statusmenu =  btn;
+        }
         if($location.$$path == btn){
             return
         } else {
