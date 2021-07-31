@@ -34,22 +34,24 @@ body{
 
 /* NAVBAR / FOOTER  */
 
-.footer-wrapper{
-    background-color: transparent;
-    height:100px;
-}
+.navbar-wrapper{height:40px;background-color: transparent;}
+.footer-wrapper{height:100px;background-color: transparent;}
+
 #loading-bar .bar {position: relative;}
 
 .navbar-simple{
+    top: 0px;
     height: 60px;
+    z-index: 1000;
+    position: fixed;
     background: rgba(0, 0, 0, 0.8);
 }
 
 .footer-simple{
     bottom: 0;
     height: 60px;
-    position: fixed;
     z-index: 1000;
+    position: fixed;
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -58,8 +60,10 @@ body{
 .btn{
     color: antiquewhite !important;
 } .btn:focus{box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0) !important;}
-.footer-btn{border-bottom: 4px solid #2e5cfe !important;}
+
 .social-btn{filter: grayscale(90%);}
+.footer-btn{border-bottom: 4px solid #2e5cfe !important;}
+.btn-translation{border-bottom-right-radius: 0px !important;border-top-right-radius: 0px !important;}
 .navbar-btn-buy{background-color: #2e5cfe !important; border-radius: 0 !important; height: 60px; width: 250px !important;} 	
 
 /* VIDEO  */

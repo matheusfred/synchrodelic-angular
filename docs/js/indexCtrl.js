@@ -34,29 +34,5 @@ moduleApp.controller('indexCtrl', function($scope, $location, $translate, cfpLoa
         cfpLoadingBar.complete();
     };
 
-    $scope.openTranslation = function(){
-
-    }
-
-    $scope.loading();
-    
-    $scope.socials =     
-        [{
-            src: 'img/twitch.png',     
-            url: 'https://www.twitch.tv/synchrodelic',  
-            name: 'Twitch',
-            alt: 'Synchrodelic Hi-synchedelic'             
-        },
-        {
-            src: 'img/instagram.png',     
-            url: 'https://www.instagram.com/synchrodelic/',  
-            name: 'Instagram',
-            alt: 'synchrodelic instagram' 
-        },
-        {
-            src: 'img/youtube.png',     
-            url: 'https://www.youtube.com/channel/UC0RYnTEbL3alGdpFLjihwRg',  
-            name: 'Youtube',
-            alt: 'synchrodelic chanel' 
-        }];     
+    $scope.loading();  
 });  
