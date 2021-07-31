@@ -4,11 +4,12 @@
 /* 
 /* Var @var moduleApp "Recebe angularModule"  
 /* Desenvolvido por Matheus Ferreira <maathe.f@gmail.com>
-/* $translate,
+/* 
 /* ****************************************************** */
-moduleApp.controller('indexCtrl', function($scope, $location, cfpLoadingBar ){   
-    $scope.statusmenu = '/';
-    
+moduleApp.controller('indexCtrl', function($scope, $location, $translate, cfpLoadingBar ){   
+    $scope.statusmenu = $location.$$path;
+    $scope.statusLanguage = 'en';
+
     $scope.loading = function(btn){ 
         if(btn != undefined){    
             $scope.statusmenu =  btn;
@@ -19,17 +20,22 @@ moduleApp.controller('indexCtrl', function($scope, $location, cfpLoadingBar ){
             cfpLoadingBar.start();
             cfpLoadingBar.complete();
         }
-    };	
+    };
+
+	$scope.changeStatus = function(language){
+        cfpLoadingBar.start();
+
+        $scope.statusLanguage =  language;
+        $translate.use(language);
+
+        cfpLoadingBar.complete();
+    };
+
+    $scope.openTranslation = function(){
+
+    }
 
     $scope.loading();
-
-    // $scope.statusmenu = 'br';
-	// $scope.changeStatus = function(newValue){
-    //     cfpLoadingBar.start();
-    //     $scope.statusmenu =  newValue;
-    //     $translate.use(newValue);
-    //     cfpLoadingBar.complete();
-    // };
     
     $scope.socials =     
         [{

@@ -1,23 +1,16 @@
-<div class="col-md-12 nopadding hidden-large">
-    <img src="../img/star.png" class="logo-cel img-fluid  mt-5" alt="">
-</div>
-
 <div class="container">
-    <div class="col-md-12 nopadding mt-md-5 mb-5 hidden">
+    <div class="col-md-12 nopadding">
         <div class="row">
             <div id="loading-bar-container"></div>
-            <div class="col-md-4 mb-5" ng-repeat="social in socials">            
-                <a href="{{social.url}}" rel="noopener noreferrer" target="_blank">  
-                    <img src="{{social.src}}" class="publi-call mx-auto d-block" alt="{{social.alt}}">
-                </a>  
-                <h5 class="text-center">{{social.name}}</h5>
-            </div>                                     
+                        
+            <!-- <div class="embed-responsive embed-responsive-1by1 d-flex justify-content-center">
+                <iframe class="embed-responsive-item video-player" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+            </div> -->
+
+            <div class="col-md-10 offset-md-1">
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div class="elfsight-app-e87308c1-8287-40f6-a897-2a015eca78dc"></div>
+            </div>
         </div>     
     </div>
-
-    <!-- <article ng-repeat="post in posts">
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.exerpt }}</p>
-        <a ui-sref="postdetail({postID: {{posts.indexOf(post)}} })">Read more &rarr;</a>
-    </article> -->
 </div>

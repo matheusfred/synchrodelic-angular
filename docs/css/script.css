@@ -1,3 +1,5 @@
+@import url('fonts.css');
+
 body{
 	background-image: url(../img/bg.png);
     background-repeat: no-repeat;
@@ -10,6 +12,10 @@ body{
     color:white !important;
 }
 
+body::-webkit-scrollbar { width: 0.5px; height: 0.5px;}
+body::-webkit-scrollbar-thumb {background-color: #263472;}
+
+.hidden-large{display: none;}  
 .selected{
     text-decoration: none !important;     
     -webkit-animation: fontcolor 20s infinite;
@@ -18,47 +24,53 @@ body{
     animation-direction: alternate;	
 }
 
-#loading-bar .bar {position: relative;}
-.hidden-large{display: none;}  
+#es-header{visibility: hidden !important; display: none !important;}
 
-.pagebox{
-	height: auto;
-    margin-top: 10px;
+/* NAVBAR / FOOTER  */
+
+.footer-wrapper{
+    background-color: transparent;
+    height:100px;
 }
+#loading-bar .bar {position: relative;}
+
+.navbar-simple{
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.footer-simple{
+    bottom: 0;
+    height: 60px;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* BTN'S  */
 
 .btn{
     color: antiquewhite !important;
 } .btn:focus{box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0) !important;}
 
-.navbar-simple{
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px) ;
-    height: 40px;
-    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.808);
-    border-bottom-right-radius: 155px;
-    border-bottom-left-radius: 155px;
+.navbar-btn-buy{background-color: #2e5cfe !important; border-radius: 0 !important; height: 60px; width: 250px !important;} 	
+.social-btn{filter: grayscale(90%);}
+
+/* VIDEO  */
+
+.video-player{
+    height: 450px;
+    width: 750px;
 }
 
-.footer-simple{
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px) ;
-    bottom: 0;
-    position: fixed;
-    height: 20px;
-    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.808);
-    border-top-right-radius: 155px;
-    border-top-left-radius: 155px;
-}
+/* IMG  */
 
-.navbar-btn-simple{margin-top: 5px;} 
-.navbar-btn-simple:hover h5{color:#02a9a2;cursor: pointer;transition: 0.4s;} 	
-
-.logo{height: 120px;width: 600px;}
-.publi-call{height: 200px; width: 200px;}
+.logo{height: 40px;width: 200px;}
+.publi-call{height: 20px; width: 20px;}
 .publi-call:hover{opacity: 0.3; transition: 0.4s;}
 
 .router-btn-simple img{height: 20px;width: 50px;}
-.router-btn-simple button{ background-color: transparent; border: none; margin-top: 2px; padding: }
+.router-btn-simple button{ background-color: transparent; border: none; margin-top: 2px;}
 .router-btn-simple button:hover img{border:grey 1px solid;}
 
 /* TRANSIÇÃO DE PÁGINAS */
@@ -66,10 +78,10 @@ body{
 .transition.ng-enter {
     transition: 0.5s linear all;
     opacity:0;
-  }
-  .transition.ng-enter.ng-enter-active {
+}
+.transition.ng-enter.ng-enter-active {
     opacity:1;
-  }
+}
 
 @keyframes bgcolor {
     0% {
@@ -95,23 +107,23 @@ body{
 
 @keyframes fontcolor {
     0% {
-        color: #fffb00;
+        color: #620080
     }
 
     20% {
-        color: #00ff22;
+        color: #0099ff
     }
 
     50% {
-        color: #0ad7fc;
+        color: #ff0000
     }
 
     70% {
-        color: #00ff22;
+        color: #0099ff
     }
 
     100% {
-        color: #fffb00;
+        color: #620080
     }
 }
 

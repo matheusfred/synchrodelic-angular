@@ -23,14 +23,15 @@
 	    <script type="text/javascript" src="lib/angular-loading-bar/loading-bar.min.js"></script>
 	    <script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
 		<script type="text/javascript" src="lib/angular-ui-router/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="lib/angular-translate/angular-translate.min.js"></script>
 
 		<!-- ANGULAR CONTROLLERS -->
 		<script type="text/javascript" src="js/app.js"></script>
 		<script type="text/javascript" src="js/routes.js"></script>
-		<script type="text/javascript" src="js/indexCtrl.js"></script>  
+		<script type="text/javascript" src="js/indexCtrl.js"></script>
+		<script type="text/javascript" src="js/translation.js"></script>    
 
 		<script type="text/javascript" src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-    
 		<script type="text/javascript">
 			var exampleCallback = function() {
 				console.log('Order complete!');
@@ -50,60 +51,62 @@
 		<div class="row">	
 		<!-- VIEW'S -->
 			<nav class="col-md-12 navbar-simple">	
-				<div class="row d-flex justify-content-center">
-					<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/');" ui-sref="index">
-						<button class="btn" type="button">
-							<h5 translate="MENU_HOME" ng-class="{selected: statusmenu === '/'}" class="m-0">Home</h5>
-						</button>
+				<div class="row">
+					<div class="col-md-6 col-6 d-flex align-items-center" >
+						<a class="navbar-brand" ng-click="loading('/');" ui-sref="index">
+							<img src="img/sync.logo.png" class="logo" alt="Logo">
+						</a>
 					</div>
 
-					<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/tickets');">
-						<noscript>
-							<a href="https://www.eventbrite.com/e/synchrodelic-island-halloween-edition-2021-tickets-164597368159" rel="noopener noreferrer" target="_blank">
-						</noscript>
-							<button class="btn" id="eventbrite-widget-modal-trigger-164597368159" type="button">
-								<h5 class="m-0" ng-class="{selected: statusmenu === 'tickets'}">Tickets</h5>
-							</button>
-						<noscript>
-							</a>
-						</noscript>
-					</div>	
+					<div class="col-md-6 col-6 d-flex justify-content-end pe-0">
+						<button class="btn btn-dark" type="button" ng-click="openTranslation();">
+							<i class="fal fa-globe-americas fa-lg"></i>
+							<!-- <div class="">
+								<button class="col-md-6"  >
+									<img src="img/euaflag.png" ng-class="{selected: statusmenu === 'en'}" 
+									alt="American flag" type="button" ng-click="changeStatus('en')">
+								</button>
+								<button class="col-md-6" >
+									<img src="img/brasilflag.png" ng-class="{selected: statusmenu === 'br'}" 
+									alt="Brazil flag" type="button" ng-click="changeStatus('br')">
+								</button>
+							</div> -->
+						</button>
 
-					<div class="col-md-1 col-4 flex-column text-center navbar-btn-simple" ng-click="loading('/about');" ui-sref="about">
-						<button class="btn" type="button">
-							<h5 translate="MENU_ABOUT" ng-class="{selected: statusmenu === '/about'}" class="m-0">About</h5>
+						<button class="btn navbar-btn-buy" id="eventbrite-widget-modal-trigger-164597368159" ui-sref="tickets" type="button">
+							<h5 class="m-0" translate="MENU_TICKETS"></h5>
 						</button>
 					</div>					
-					<!-- <div class="col-md-1 text-center navbar-btn-simple" ui-sref="release"><h5>Release</h5></div>
-					<div class="col-md-1 text-center navbar-btn-simple" ui-sref="event"><h5>Event</h5></div> -->
-					
-					<!-- <div class="col-md-2 offset-md-6 hidden router-btn-simple">
-						<div class="row" aria-labelledby="dropdownLang">
-							<button class="col-md-6"  >
-								<img src="img/euaflag.png" ng-class="{selected: statusmenu === 'en'}" 
-								alt="American flag" type="button" ng-click="changeStatus('en')">
-							</button>
-							<button class="col-md-6" >
-								<img src="img/brasilflag.png" ng-class="{selected: statusmenu === 'br'}" 
-								alt="Brazil flag" type="button" ng-click="changeStatus('br')">
-							</button>
-						</div>														
-					</div> -->
 				</div>
 			</nav>		
 
+			<!-- VIEW'S -->
 			<div class="container mt-5">	
 				<div class="row">
-					<div class="col-md-12 hidden">
-						<img src="img/sync.logo.png" class="logo mx-auto d-block" alt="Logo">
-					</div>		
-
-					<!-- VIEW'S -->
-					<div class="col-lg-12 transition mt-5" ui-view></div>
+					<div class="col-lg-12 transition" ui-view></div>
 				</div>	
 			</div>
 
-			<div class="col-md-12 footer-simple"></div>
+			<!-- FOOTER  -->
+			<div class="col-lg-12 footer-wrapper"></div>
+			<div class="col-md-12 footer-simple">
+				<div class="row mt-2">
+					<div class="col-md-2 mt-1 col-4" ng-click="loading('/about');" ui-sref="about">
+						<button class="btn footer-btn" type="button">
+							<h5 translate="ABOUT_TITTLE" ng-class="{selected: statusmenu === '/about'}" class="m-0"></h5>
+						</button>
+					</div>	
+					<div class="col-md-10 mt-3 d-flex justify-content-end social-btn">
+						<div class="row">
+							<div class="col-md-1 mx-3" ng-repeat="social in socials">            
+								<a href="{{social.url}}" rel="noopener noreferrer" target="_blank">  
+									<img src="{{social.src}}" class="publi-call mx-auto d-block" alt="{{social.alt}}">
+								</a>  
+							</div>   
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>	
 
 		<!-- BODY SCRIPT -->

@@ -38,7 +38,7 @@
 // firebase.initializeApp(config);
 // firebase.analytics();
 
-var moduleApp = angular.module('moduleApp', ['ngAnimate', 'ui.router', 'angular-loading-bar'])
+var moduleApp = angular.module('moduleApp', ['ngAnimate', 'pascalprecht.translate', 'ui.router', 'angular-loading-bar'])
 .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.includeSpinner  = false;
     cfpLoadingBarProvider.latencyThreshold = 500;
