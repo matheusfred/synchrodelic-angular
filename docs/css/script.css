@@ -133,18 +133,16 @@ body{
     }
 }
 
-/****** TABLET ******/
-
-@media only screen and (max-width: 768px) {
-    .hidden{display: none;}
-    .hidden-large{display: inline;}
-    .logo-cel{
-        height: 260px;
-    }
-}	 
-
 /****** MOBILE ******/
 @media only screen and (max-width: 450px) {
+    .background-wrapper {display: none;}
+    .logo{height: 30px;width: 150px;}
+
+    .video-player{
+        height: 250px;
+        width: 850px;
+    }
+
     body{
         background-image: url(../img/bg-mobile.png);
         background-repeat: no-repeat;

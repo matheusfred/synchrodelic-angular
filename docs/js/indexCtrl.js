@@ -22,11 +22,14 @@ moduleApp.controller('indexCtrl', function($scope, $location, $translate, cfpLoa
         }
     };
 
-	$scope.changeStatus = function(language){
+	$scope.changeStatus = function(){
         cfpLoadingBar.start();
 
-        $scope.statusLanguage =  language;
-        $translate.use(language);
+        if($scope.statusLanguage == 'en'){
+            $scope.statusLanguage = 'br'
+            $translate.use('br');
+        }
+        else {$translate.use('en');$scope.statusLanguage = 'en'}
 
         cfpLoadingBar.complete();
     };
