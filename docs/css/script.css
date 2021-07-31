@@ -139,8 +139,10 @@ body{
 
 /****** MOBILE ******/
 @media only screen and (max-width: 450px) {
+    .hidden-large {display: block;}
+    .hidden-mobile{display: none;}
     .background-wrapper {display: none;}
-    .logo{height: 30px;width: 150px;}
+    .logo{height: 30px;width: 30px;}
 
     .video-player{
         height: 250px;

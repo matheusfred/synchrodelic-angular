@@ -55,19 +55,20 @@
 		<!-- VIEW'S -->
 			<nav class="col-md-12 col-12 navbar-simple">	
 				<div class="row">
-					<div class="col-md-6 col-6 d-flex align-items-center" >
+					<div class="col-md-4 col-2 d-flex align-items-center" >
 						<a class="navbar-brand" ng-click="loading('/');" ui-sref="index">
-							<img src="img/sync.logo.png" class="logo" alt="Logo">
+							<img src="img/star.png" class="logo hidden-large" alt="Logo">
+							<img src="img/sync.logo.png" class="logo hidden-mobile" alt="Logo">
 						</a>
 					</div>
 
-					<div class="col-md-6 col-6 d-flex justify-content-end pe-0">
-						<button class="btn btn-dark btn-translation col-2" type="button" ng-click="changeStatus()">
+					<div class="col-md-8 col-10 d-flex justify-content-end pe-0">
+						<button class="btn btn-dark btn-translation col-3" type="button" ng-click="changeStatus()">
 							<i class="fal fa-globe-americas fa-lg"></i>
 							<span class="text-uppercase">{{statusLanguage}}</span>
 						</button>
 
-						<button class="btn navbar-btn-buy" id="eventbrite-widget-modal-trigger-164597368159" ui-sref="tickets" type="button">
+						<button class="btn navbar-btn-buy col-10" id="eventbrite-widget-modal-trigger-164597368159" ui-sref="tickets" type="button">
 							<h5 class="m-0" translate="MENU_TICKETS"></h5>
 						</button>
 					</div>					
@@ -93,17 +94,17 @@
 					</div>	
 					<div class="col-md-10 col-6 mt-3 d-flex justify-content-end social-btn">
 						<div class="row">
-							<div class="col-md-1 col-2 mx-3">            
+							<div class="col-md-1 col-2 mx-1">            
 								<a href="https://www.twitch.tv/synchrodelic" rel="noopener noreferrer" target="_blank">  
 									<img src="img/twitch.png" class="publi-call mx-auto d-block" alt="Synchrodelic Hi-synchedelic">
 								</a>  
 							</div>  
-							<div class="col-md-1 col-2 mx-3">            
+							<div class="col-md-1 col-2 mx-1">            
 								<a href="https://www.instagram.com/synchrodelic/" rel="noopener noreferrer" target="_blank">  
 									<img src="img/instagram.png" class="publi-call mx-auto d-block" alt="Synchrodelic IG">
 								</a>  
 							</div> 
-							<div class="col-md-1 col-2 mx-3">            
+							<div class="col-md-1 col-2 mx-1">            
 								<a href="https://www.youtube.com/channel/UC0RYnTEbL3alGdpFLjihwRg" rel="noopener noreferrer" target="_blank">  
 									<img src="img/youtube.png" class="publi-call mx-auto d-block" alt="Synchrodelic Channel">
 								</a>  
