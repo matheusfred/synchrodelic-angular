@@ -139,8 +139,8 @@ body{
 
 /****** MOBILE ******/
 @media only screen and (max-width: 450px) {
-    .hidden-large {display: block;}
-    .hidden-mobile{display: none;}
+    .hidden-large {display: block !important;}
+    .hidden-mobile{display: none !important;}
     .background-wrapper {display: none;}
     .logo{height: 30px;width: 30px;}
 
