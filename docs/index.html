@@ -31,26 +31,34 @@
 		<script type="text/javascript" src="js/indexCtrl.js"></script>
 		<script type="text/javascript" src="js/translation.js"></script>    
 
-		<script type="text/javascript" src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 		<script type="text/javascript" src="https://apps.elfsight.com/p/platform.js" defer></script>
+		<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
 		<script type="text/javascript">
 			var exampleCallback = function() {
 				console.log('Order complete!');
 			};
 		
 			window.EBWidgets.createWidget({
+				// Required
 				widgetType: 'checkout',
 				eventId: '164597368159',
-				modal: true,
-				modalTriggerElementId: 'eventbrite-widget-modal-trigger-164597368159',
-				onOrderComplete: exampleCallback
+				iframeContainerId: 'eventbrite-widget-container-164597368159',
 			});
 		</script>
 	</head>
 
 	<body ng-controller="indexCtrl" class="container-fluid">
 		<div class="background-wrapper"></div>
-		
+	
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+				<div class="offcanvas-header">
+				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+			<div class="offcanvas-body" id="eventbrite-widget-container-164597368159">
+			</div>
+		  </div>
+
 		<div class="row">	
 		<!-- VIEW'S -->
 			<nav class="col-md-12 col-12 navbar-simple">	
@@ -68,7 +76,7 @@
 							<span class="text-uppercase">{{statusLanguage}}</span>
 						</button>
 
-						<button class="btn navbar-btn-buy col-10" id="eventbrite-widget-modal-trigger-164597368159" ui-sref="tickets" type="button">
+						<button class="btn navbar-btn-buy col-10" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"  type="button">
 							<h5 class="m-0" translate="MENU_TICKETS"></h5>
 						</button>
 					</div>					
