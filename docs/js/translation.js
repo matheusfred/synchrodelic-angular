@@ -5,8 +5,8 @@ moduleApp.config(['$translateProvider', function ($translateProvider) {
       'HOME_TITTLE': 'Synchronizing psytrance in Florida',
       'ABOUT_TITTLE': 'About us',
       
-      'ABOUT_SUBTITTLE': 'Synchronizing the culture of psytrance',
-      'HOME_SUBTITTLE': 'Description about our festival'
+      'ABOUT_SUBTITTLE': 'Syncrodelic Festival is a non-profit event aimed at expanding the psychedelic culture in Florida, our event is held on an island adopted by our crew called Spoil Island. We believe that nature and music go hand in hand and that''s why we take care and ask people who attend this event to enjoy it responsibly, keeping the island always clean and respecting the environment, people and local culture as much as possible.',
+      'HOME_SUBTITTLE': 'Art, Culture, Ecology and Music is everything we believe in! We are a crew of Brazilian origin and we create multicultural events with artistic, craft, musical activities, and we take our audience to explore the concepts of an alternative community, which seeks peace, love, unity, respect and psycodelia through music.'
     });
    
     $translateProvider.translations('br', {
